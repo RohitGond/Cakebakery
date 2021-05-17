@@ -1,0 +1,19 @@
+<div class= "filter">
+<input [(ngModel)] = 'min' name = 'min' type="text" placeholder="min-price">
+<input [(ngModel)] = 'max' type="text" name = 'max' placeholder="max-price">
+<button (click)="filter()">filter</button>
+</div>
+<div class="container">
+  <div   *ngFor="let cake of searchcakes" routerLink='/cake/{{cake.cakeid}}'   class="card" style="width: 18rem; height: 18rem" appCakeHighlight>
+  <span *ngIf="cake.nonVeg"><img src="assets/nonVeg.png" alt="" /></span>
+  <span *ngIf="!cake.nonVeg"><img src="assets/veg.png" alt="" /></span>
+  <img src="{{ cake.image }}" class="card-img-top" alt="..." />
+
+  <div class="card-body">
+    <h5 class="card-title">{{ cake.name }}</h5>
+    <p class="card-text">₹{{ cake.price }}</p>
+    <p class="card-text">{{ cake.weight }}</p>
+  </div>
+</div>
+</div>
+   

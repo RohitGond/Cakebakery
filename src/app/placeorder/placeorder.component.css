@@ -1,0 +1,21 @@
+
+
+
+
+
+
+
+
+  /* new? */
+  .containers{
+    display: flex
+   
+   
+  }
+  .side{
+    width: 20vw;
+    background-color: greenyellow;
+  }
+  .side > h6{
+    width: 100%;
+  }

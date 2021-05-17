@@ -1,0 +1,14 @@
+
+<div class="container"  >
+  <div  (click)="cakedetail(cake.cakeid)" *ngFor="let cake of cakeSearch; let i as index"   class="card" style="width: 18rem; height: 18rem" (click)="cakedetail(i)" appCakeHighlight>
+  <!-- <span *ngIf="cake.nonveg"><img src="assets/nonVeg.png" alt="" /></span>
+  <span *ngIf="!cake.nonveg"><img src="assets/veg.png" alt="" /></span> -->
+  <img src="{{ cake.image }}" class="card-img-top" alt="..." />
+
+  <div class="card-body">
+    <h5 class="card-title">{{ cake.name }}</h5>
+    <p class="card-text">₹{{ cake.price }}</p>
+    <p class="card-text">{{ cake.weight }}</p>
+  </div>
+</div>
+</div>

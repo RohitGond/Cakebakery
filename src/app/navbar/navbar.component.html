@@ -1,0 +1,74 @@
+<nav class="navbar navbar-expand-lg navbar-light ">
+  <div class="container-fluid">
+    <a class="navbar-brand" routerLink="/"
+      >
+      <!-- <img src="assets/logo.png" alt="cake-house" class="logo" /> -->
+      <span class="highlight"> CakeBakery</span></a
+    >
+    <button  *ngIf="!flag" class="btn btn-primary" type="submit" routerLink="/admin">
+      Admin
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <!-- <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li> -->
+        <!-- <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="navbarDropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Dropdown
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><hr class="dropdown-divider" /></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li> -->
+        <!-- <li class="nav-item">
+          <a
+            class="nav-link disabled"
+            href="#"
+            tabindex="-1"
+            aria-disabled="true"
+            >Disabled</a
+          >
+        </li> -->
+      </ul>
+      <form class="d-flex size">
+        <input
+          class="form-control me-2 width"
+          type="search"
+          placeholder="Search"
+          aria-label="Search"
+          name="search"
+          [(ngModel)] = "searchcake" 
+        />
+        <button (click) = "search()"class="btn btn-success" type="submit">Search</button>
+        <button
+          class="btn btn-dark btn-border-primary"
+          type="submit"
+          routerLink="/login"
+          *ngIf="flag"
+        >
+          Login
+        </button>
+        <button class="order btn btn-primary" *ngIf="!flag" routerLink = "/previousorders" >Orders</button>
+        <button class="cart btn btn-primary" *ngIf="!flag" routerLink = "/cart"><i  class="fas fa-shopping-cart"></i></button>
+        
+        <button (click)='logout()' *ngIf="!flag" class="btn btn-primary" type="submit" routerLink="/login">
+          LogOut
+        </button>
+      </form>
+    </div>
+  </div>
+</nav>

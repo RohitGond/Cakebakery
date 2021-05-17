@@ -1,0 +1,35 @@
+<table class="table table-striped table-hover">
+    <thead>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>Total: {{this.cs.total}}</td>
+        <th > <button class="btn btn-dark btn-border-primary" routerLink="/checkout" >Checkout</button></th>
+      </tr>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Image</th>
+          <th scope="col">Name</th>
+          <th scope="col">Price</th>
+          <th scope="col">Quantity</th>
+          <th scope="col">Weight</th>
+          <th scope="col">Remove</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr  *ngFor = "let percake of cs.cartItem; let i = index">
+          <th scope="row">{{i+1}}</th>
+          <td> <img  [src]="percake.image" alt="" height="40px" width="40px"></td>
+          <td>{{percake.name}}</td>
+          <td>{{percake.price}}</td>
+          <td>{{percake.quantity}}</td>
+          <td>{{percake.weight}}</td>
+          <td><i (click) = 'removeCake(percake.cakeid)' class = 'far fa-trash-alt'></i></td>
+        </tr>
+       
+       
+      </tbody>
+  </table>

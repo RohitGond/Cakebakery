@@ -1,0 +1,33 @@
+a.navbar-brand {
+    font-size: 30px;
+    color: wheat;
+    font-weight: 700;
+  }
+  .navbar-brand:hover {
+    color: rgb(173, 168, 158);
+  }
+  .navbar {
+    background: #3c1321;
+    height: 70px;
+ 
+  }
+  .highlight {
+    color: #fff;
+  }
+  .btn-border-primary {
+    border: 2px solid #555;
+    margin: 0 10px;
+  }
+  
+  .logo {
+    width: 7%;
+    height: 50%;
+    object-fit: cover;
+  }
+  .size{
+    height: 40px;
+  }
+  .width{
+    width: 30vw;
+  }
+ 

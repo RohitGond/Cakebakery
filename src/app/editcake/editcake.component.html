@@ -1,0 +1,50 @@
+<!-- <form>
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Name</label>
+      <input type="text" class="form-control" name="name" [(ngModel)] = 'cakeobj.name' id="exampleInputEmail1" aria-describedby="emailHelp">
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Price</label>
+      <input type="text" class="form-control" name="price" [(ngModel)] = 'cakeobj.price' id="exampleInputPassword1">
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Weight</label>
+      <input type="text" class="form-control" name="weight" [(ngModel)] = 'cakeobj.weight' id="exampleInputPassword1">
+    </div>
+    <div class="mb-3 form-check">
+      <input type="checkbox" class="form-check-input" *ngif = 'cakeobj.eggless === true' id="exampleCheck1" checked>
+      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+      <label class="form-check-label" for="exampleCheck1"  value = 'False'>Eggless</label>
+    </div>
+    <img   [src]="cakeobj.image" alt="">
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form> -->
+  <div class="parentdiv">
+    <h4>Edit Cake Form</h4>
+    <form class="editform">
+        <img   [src]="cakeobj.image" alt="">
+        <div>
+        <label for="name">Name : </label>
+        <input type="text" id="name" name="name" [(ngModel)] = 'cakeobj.name'>
+        </div>
+        <div>
+        <label for="weight">Weight : </label>
+        <input type="number" id="weight" name="weight" [(ngModel)] = 'cakeobj.weight'>
+        </div>
+        <div>
+        <label for="price">Price : </label>
+        <input type="number" id="price" name="price" [(ngModel)] = 'cakeobj.price'>
+        </div>
+        <div>
+        <label for="eggless">Eggless : </label>
+        <input type="checkbox" id="eggless" name="eggless" [(ngModel)] = 'cakeobj.eggless'>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+
+
+
+
+
+
+      </form>
+</div> 

@@ -1,0 +1,26 @@
+.cake-list {
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: space-between; */
+    background: rgba(180, 173, 78, 0.384);
+    border-radius: 10px;
+    padding: 25px;
+    margin: 25px;
+    margin-bottom: 0;
+  }
+  .no-query {
+    background: rgba(255, 255, 255, 0.61);
+    padding: 10%;
+    width: 100%;
+  }
+  .no-query p {
+    width: 100%;
+    text-align: center;
+    color: rgb(152 133 77);
+  }
+  .no-query img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+  }
+  

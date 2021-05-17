@@ -1,0 +1,24 @@
+.login-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px;
+    flex-direction: column;
+    background: #fff;
+    padding: 50px;
+    /* border: 0.5px solid black; */
+  }
+  .login-section form {
+    width: 50%;
+  }
+  .login-section form input {
+    margin: 20px 0;
+  }
+  .login-section form button {
+    margin: 10px;
+  }
+  .form-text{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }

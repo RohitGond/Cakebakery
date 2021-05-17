@@ -1,0 +1,36 @@
+
+<div class="containers">
+    <div>
+    <div class="cakeimg" >
+        <span *ngIf="!cakeobj.eggless"><img class="icon" src="assets/nonVeg.png" alt="" /></span>
+        <span *ngIf="cakeobj.eggless"><img class="icon" src="assets/veg.png" alt="" /></span>
+        <img src="{{cakeobj.image}}"  >
+    </div>
+    <div class="details">
+        
+        <h4> {{cakeobj.name}}</h4>
+        <!-- <p>Create Date:  {{cakeobj.createdat}}</p> -->
+        <div class="ratings">
+        <h6>Price:  {{cakeobj.price}}</h6>
+        <h6>Weight: {{cakeobj.weight}}</h6>
+            <h6>Flavour: {{cakeobj.flavour}}</h6>
+            <h6>Likes: {{cakeobj.likes}}</h6>
+            <!-- <ul>
+                Owner: 
+                <li>Name: {{cakeobj.owner.name}} </li>
+                <li>Email: {{cakeobj.owner.email}} </li>
+            </ul> -->
+            <h6>Rating: {{cakeobj.ratings}}</h6>
+            <h6>Reviews: {{cakeobj.reviews}}</h6>
+        </div>
+        <h6>Description: {{cakeobj.description}}</h6>
+        <h6>type: {{cakeobj.type}}</h6>
+        <button (click)="add()">Add To Cart</button>
+
+        <!-- <form upload($event) >
+            <input type="file" name="imagefile">
+            <button>Upload Image</button>
+        </form> -->
+       </div>
+    </div> 
+</div>

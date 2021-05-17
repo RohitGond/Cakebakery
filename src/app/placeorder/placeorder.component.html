@@ -1,0 +1,14 @@
+
+
+<div class="containers">
+    <div class="side"  >
+      <a [routerLink]= "['address']" >Address</a>
+      <a [routerLink]= "['payment']">Payment</a>
+      <a (click) = "confirmorder()">Confirmation</a>
+   
+    </div>
+
+    <router-outlet></router-outlet>
+
+
+</div>

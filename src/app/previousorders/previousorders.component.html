@@ -1,0 +1,47 @@
+<!-- address: "rehfjmytdjy"
+cakes: (6) [{…}, {…}, {…}, {…}, {…}, {…}]
+city: "hytr"
+compeleted: false
+email: "gondrohit4@gmail.com"
+mode: "cash"
+name: "rohit"
+orderdate: "2021-05-13T04:38:01.325Z"
+orderid: 1620890684631
+pending: true
+phone: "4654644"
+pincode: 276001
+price: 10249 -->
+
+    <div  class="bgcolor1">
+        <div class="grid bgcolor" >
+          <h5>Order Id</h5>
+          <h5>Name</h5>
+          <h5>Price</h5>
+          <h5>Order Date</h5>
+       
+        </div>
+      
+        <div class="bgcolor2"  *ngFor = "let percake of orders ; index as i">
+            <div  (click) = "showDetails(i)" class="grid  ">
+                <div>{{percake.orderid}}</div>
+                
+                <div>{{percake.name}}</div>
+                <div>{{percake.price}}</div>
+                <div>{{percake.orderdate}}</div>
+            
+            </div>
+            <div class="hidden " id="naam{{i}}">
+                <div class="grid size " >
+                    <div class="details " *ngFor = "let cake of percake.cakes" >
+                            <div > name : {{cake.name}}</div>
+                            
+                            <div>Weight : {{cake.weight}}</div>
+                            <div>Quantity : {{cake.quantity}}</div>
+                            <div>Price : {{cake.price}}</div>
+                        
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
