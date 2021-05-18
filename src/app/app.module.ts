@@ -36,6 +36,7 @@ import { CheckoutSummaryComponent } from './checkout-summary/checkout-summary.co
 import { CheckoutAddressComponent } from './checkout-address/checkout-address.component';
 import { CheckoutPaymentComponent } from './checkout-payment/checkout-payment.component';
 import { OrderconfermComponent } from './orderconferm/orderconferm.component';
+import { RoutegaurdService } from './routegaurd.service';
 // import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 
 @NgModule({
@@ -73,7 +74,7 @@ import { OrderconfermComponent } from './orderconferm/orderconferm.component';
     BrowserAnimationsModule,
     ToastrModule.forRoot(), ],
   providers: [
-    {provide : HTTP_INTERCEPTORS,useClass: AuthinterceptorService, multi : true}
+    {provide : HTTP_INTERCEPTORS,useClass: AuthinterceptorService, multi : true}, RoutegaurdService
   ],
   bootstrap: [AppComponent],
 })

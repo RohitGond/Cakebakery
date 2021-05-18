@@ -17,14 +17,19 @@ export class LoginComponent implements OnInit {
        private http : HttpClient,
         private routes : ActivatedRoute,
         private toast : ToastrService) {
-          this.user.email = this.routes.snapshot.params['email'];
+          // this.user.email = this.routes.snapshot.params['email'];
+       
         }
 message : any;
   ngOnInit(): void {}
   login() {
+    
     if (!this.user.email || !this.user.password)
     alert('Please fill all the field');
+    if(! this.ls.ValidateEmail(this.user.email) )
+    return;
   var apiurl = 'https://apifromashu.herokuapp.com/api/login';
+
   this.http.post(apiurl, this.user).subscribe(
     (response: any) => {
       console.log('response from signup api', response);

@@ -16,6 +16,7 @@ import { CheckoutSummaryComponent } from './checkout-summary/checkout-summary.co
 import { CheckoutAddressComponent } from './checkout-address/checkout-address.component';
 import { CheckoutPaymentComponent } from './checkout-payment/checkout-payment.component';
 import { OrderconfermComponent } from './orderconferm/orderconferm.component';
+import { RoutegaurdService } from './routegaurd.service';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -31,7 +32,7 @@ const routes: Routes = [
    children: [
    {path: '' , component : CheckoutSummaryComponent},
    {path: 'address' , component : CheckoutAddressComponent},
-   {path: 'payment' , component : CheckoutPaymentComponent},
+   {path: 'payment' , component : CheckoutPaymentComponent , canDeactivate: [RoutegaurdService]},
    {path: 'orderconfirm' , component : OrderconfermComponent},
     ]},
   {path: 'previousorders', component : PreviousordersComponent},

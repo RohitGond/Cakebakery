@@ -5,9 +5,21 @@ import { Injectable } from '@angular/core';
 })
 export class LoginServiceService {
   constructor() {}
-  validateEmail(email: any) {
-    const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    return re.test(String(email).toLowerCase());
+  ValidateEmail(inputText:any)
+  {
+  var mailformat = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+  if(inputText.match(mailformat))
+  {
+  
+  
+  return true;
+  }
+  else
+  {
+  alert("Please! enter the valid mail id");
+
+  return false;
+  }
   }
 
 

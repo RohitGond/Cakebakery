@@ -13,9 +13,13 @@
    
   }
   .side{
+    display: flex;
+    flex-direction: column;
     width: 20vw;
     background-color: greenyellow;
   }
-  .side > h6{
+  .side > button{
     width: 100%;
+    border: none;
+    height: 50px;
   }
