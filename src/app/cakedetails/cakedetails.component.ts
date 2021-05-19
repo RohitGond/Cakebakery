@@ -46,7 +46,8 @@ export class CakedetailsComponent implements OnInit {
     // header = header.set('authtoken', token);
     this.http.post(api, this.cakeobj).subscribe((response) => {
       console.log("add cake to cart response",response)
-      
+      // if(response.message === "Added to cart")
+      this.toast.info("added to cart!")
     }, (error) => {
       
       console.log("add cake to cart error",error)

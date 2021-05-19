@@ -17,6 +17,7 @@ import { CheckoutAddressComponent } from './checkout-address/checkout-address.co
 import { CheckoutPaymentComponent } from './checkout-payment/checkout-payment.component';
 import { OrderconfermComponent } from './orderconferm/orderconferm.component';
 import { RoutegaurdService } from './routegaurd.service';
+import { AdditemComponent } from './additem/additem.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -26,8 +27,8 @@ const routes: Routes = [
   {path: 'search', component: SearchcakeComponent},
   { path: 'cake/:id', component: CakedetailsComponent },
   {path : 'cart', component : CartComponent},
-  {path: 'editcake/:id', component : EditcakeComponent},
-  {path: 'admin', component : AdminComponent},
+ 
+  {path: 'admin', loadChildren :() => import( "./admin/admin.module").then((m) => m.AdminModule)   },
   {path: 'checkout', component : PlaceorderComponent, 
    children: [
    {path: '' , component : CheckoutSummaryComponent},
@@ -36,6 +37,7 @@ const routes: Routes = [
    {path: 'orderconfirm' , component : OrderconfermComponent},
     ]},
   {path: 'previousorders', component : PreviousordersComponent},
+
 ];
 
 @NgModule({

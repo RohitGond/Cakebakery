@@ -37,6 +37,7 @@ import { CheckoutAddressComponent } from './checkout-address/checkout-address.co
 import { CheckoutPaymentComponent } from './checkout-payment/checkout-payment.component';
 import { OrderconfermComponent } from './orderconferm/orderconferm.component';
 import { RoutegaurdService } from './routegaurd.service';
+import { AddcakeComponent } from './addcake/addcake.component';
 // import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 
 @NgModule({
@@ -68,6 +69,7 @@ import { RoutegaurdService } from './routegaurd.service';
     CheckoutAddressComponent,
     CheckoutPaymentComponent,
     OrderconfermComponent,
+    AddcakeComponent,
    
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule, CommonModule,

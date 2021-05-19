@@ -6,6 +6,7 @@ import { Router } from '@angular/router';
   providedIn: 'root'
 })
 export class CommonserviceService {
+  disablebtn: any = true;
   cartItem : any =[]
   priceArray: any =[]
   total:any;

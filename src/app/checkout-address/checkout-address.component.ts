@@ -33,9 +33,11 @@ export class CheckoutAddressComponent implements OnInit {
       //  console.log(res);
       if(!res.error)
        this.route.navigate(["checkout/payment"])
+       else this.toast.info("please fill all the fields !")
       },
       (err) => {
         console.log(err);
+        
       });
 
   

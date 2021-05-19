@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
+import { CommonserviceService } from '../commonservice.service';
 
 @Component({
   selector: 'app-placeorder',
@@ -13,7 +14,7 @@ export class PlaceorderComponent implements OnInit {
   orderdetails: any = {};
   constructor( private http : HttpClient,
     private routes : ActivatedRoute,
-    private toast : ToastrService, private route : Router) {
+    private toast : ToastrService, private route : Router, public cs : CommonserviceService) {
       let api = 'https://apifromashu.herokuapp.com/api/cakecart';
       this.http.post(api,{}).subscribe((res:any)=> 
       {

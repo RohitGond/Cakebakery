@@ -3,17 +3,18 @@
 <div class="containers">
     <div class="side"  >
       
-      <button [routerLink]= "['/']" >Summary</button>
-      <button [routerLink]= "['address']" >Address</button>
-      <button [routerLink]= "['address']" disabled>Address</button>
-      <button [routerLink]= "['payment']">Payment</button>
-      <button [routerLink]= "['payment']" disabled>Payment</button>
-      <button (click) = "confirmorder()">Confirmation</button>
-      <button (click) = "confirmorder()" disabled>Confirmation</button>
+      <button [routerLink]= "['/checkout']" *ngIf = "cs.disablebtn" >Summary</button>
+      <button [routerLink]= "['/checkout']" *ngIf = "!cs.disablebtn" disabled >Summary</button>
+      <button [routerLink]= "['address']"  *ngIf = "!cs.disablebtn">Address</button>
+      <button [routerLink]= "['address']" *ngIf = "cs.disablebtn" disabled>Address</button>
+      <button [routerLink]= "['payment']" *ngIf = "!cs.disablebtn">Payment</button>
+      <button [routerLink]= "['payment']" *ngIf = "cs.disablebtn" disabled>Payment</button>
+      <button (click) = "confirmorder()" *ngIf = "!cs.disablebtn">Confirmation</button>
+      <button (click) = "confirmorder()" *ngIf = "cs.disablebtn" disabled>Confirmation</button>
    
     </div>
-
+   <div class="routes">
     <router-outlet></router-outlet>
-
+   </div>
 
 </div>

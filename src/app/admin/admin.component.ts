@@ -15,7 +15,7 @@ export class AdminComponent implements OnInit {
   }
   cakedetail(id: any) {
     console.log(id);
-    this.route.navigate(['/editcake', id]);
+    this.route.navigate(['/admin/editcake', id]);
   
   }
   ngOnInit(): void {
