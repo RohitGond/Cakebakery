@@ -7,7 +7,7 @@ a.navbar-brand {
     color: rgb(173, 168, 158);
   }
   .navbar {
-    background: #3c1321;
+    background: #f7f46f;
     height: 70px;
  
   }
@@ -29,5 +29,9 @@ a.navbar-brand {
   }
   .width{
     width: 30vw;
+  }
+  .bgcolor{
+    background-color: rgb(238, 223, 91);
+    border: solid rgb(238, 223, 91) 1px;
   }
  

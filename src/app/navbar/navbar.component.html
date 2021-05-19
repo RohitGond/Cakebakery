@@ -5,8 +5,8 @@
       <!-- <img src="assets/logo.png" alt="cake-house" class="logo" /> -->
       <span class="highlight"> CakeBakery</span></a
     >
-    <button  *ngIf="!flag" class="btn btn-primary" type="submit" routerLink="/admin">
-      Admin
+    <button  *ngIf="!flag" class="btn btn-border-primary" type="submit" routerLink="/admin">
+      <i class="fas fa-user-shield"></i>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
@@ -44,6 +44,7 @@
           >
         </li> -->
       </ul>
+    </div>
       <form class="d-flex size">
         <input
           class="form-control me-2 width"
@@ -53,22 +54,23 @@
           name="search"
           [(ngModel)] = "searchcake" 
         />
-        <button (click) = "search()"class="btn btn-success" type="submit">Search</button>
-        <button
-          class="btn btn-dark btn-border-primary"
-          type="submit"
-          routerLink="/login"
-          *ngIf="flag"
-        >
-          Login
-        </button>
-        <button class="order btn btn-primary" *ngIf="!flag" routerLink = "/previousorders" >Orders</button>
-        <button class="cart btn btn-primary" *ngIf="!flag" routerLink = "/cart"><i  class="fas fa-shopping-cart"></i></button>
-        
-        <button (click)='logout()' *ngIf="!flag" class="btn btn-primary" type="submit" routerLink="/login">
-          LogOut
-        </button>
+        <button (click) = "search()"class="btn btn-border-primary " type="submit">Search</button>
       </form>
-    </div>
+ 
+      <button
+        class=" btn btn-border-primary "
+        type="submit"
+        routerLink="/login"
+        *ngIf="flag"
+      >
+        Login
+      </button>
+      <button class="order btn btn-border-primary " *ngIf="!flag" routerLink = "/previousorders" >Orders</button>
+      <button class="cart btn btn-border-primary " *ngIf="!flag" routerLink = "/cart"><i  class="fas fa-shopping-cart"></i></button>
+      
+      <button (click)='logout()' *ngIf="!flag" class="btn btn-border-primary " type="submit" routerLink="/login">
+        LogOut
+      </button>
+   
   </div>
 </nav>
